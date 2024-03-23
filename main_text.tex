@@ -1,10 +1,6 @@
 % !TeX encoding = UTF-8
-\documentclass[bind,a4paper,table]{mythesis}
+\documentclass[bind,a4paper]{mythesis}
 
-\usepackage{booktabs}
-\usepackage{xcolor}
-\usepackage{tabularx}
-\usepackage{ltablex}
 \usepackage{thesis}
 %\usepackage[full,round]{harvard}%
 \usepackage{natbib}%\bibpunct{(}{)}{;}{a}{,}{,}
@@ -31,19 +27,15 @@
 \usepackage{authorindex}
 \usepackage{multirow}
 \usepackage{picture}
-\usepackage[algochapter,algoruled,linesnumbered,lined,portuguese]{algorithm2e}
-%\usepackage{algorithmic2e}
-%\usepackage[ruled,vlined,portuguese]{algorithm2e}
-%\usepackage{algorithm}
-%\usepackage{algorithmic}
-%\usepackage[noend]{algpseudocode}
+\usepackage[algochapter,algoruled,linesnumbered,vlined,portugues]{algorithm2e}
+\usepackage{algorithmic2e}
 %\usepackage{rotating}
 \usepackage{tocbibind}
 \usepackage{array}
 \usepackage{lscape}
-\usepackage{caption}
 %\usepackage{ragged2e}
 
+%\usepackage[ruled,vlined,portuguese]{algorithm2e}
 \usepackage{rotating}
 \usepackage{longtable}
 \usepackage{listings}
@@ -51,19 +43,12 @@
 \usepackage{url}
 \usepackage{cancel}
 \usepackage{scalefnt}
-\usepackage{makecell}
 \usepackage{todonotes}
 \usepackage{wrapfig}
 
 \usepackage{float}
 \restylefloat{figure}
-\newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
-
-\usepackage{pifont}% http://ctan.org/pkg/pifont
-\newcommand{\cmark}{\ding{51}}%
-\newcommand{\xmark}{\ding{55}}%
-
-
+%\usepackage[T1]{fontenc}
 %\input{tex/defs.tex}
 \makeindex
 
@@ -108,7 +93,6 @@
 \newcommand{\benchmarks}   {\textit{benchmarks}}
 \newcommand{\Benchmark}   {\textit{Benchmark}}
 \newcommand{\Benchmarks}   {\textit{Benchmarks}}
-\newcommand{\titulo}{Uma Abordagem do Problema de Particionamento \Hardware\ e \Software\ para \Design\ de Sistemas Computacionais \Wearables}
 
 \newcommand{\A}{$\mathcal{A}$}
 \newcommand{\B}{$\mathcal{B}$}
@@ -131,7 +115,7 @@
 \@ifpackageloaded{hyperref}{%
   \hypersetup{%
   colorlinks=false,
-  pdftitle = {Uma Abordagem do Problema do Particionamento \Hardware\ e \Software\ para \Design\ de Sistemas Computacionais \Wearables},
+  pdftitle = {Uma Abordagem do Problema de Particionamento \Hardware\ e \Software\ para \Design\ de Sistemas Computacionais \Wearables},
   pdfsubject = {Rodolfo Labiapari Mansur Guimarães's MsC thesis},
   pdfkeywords = {Wearable, FPGA, Hardware Software Partitioning},
   pdfauthor = {\textcopyright\ Rodolfo Labiapari Mansur Guimarães}}
@@ -159,7 +143,7 @@
 %% Define the thesis title and author
 \begin{document}
 \let\cleardoublepage\clearpage
-\title{\titulo}
+\title{Uma Abordagem do Problema de Particionamento \Hardware\ e \Software\ para \Design\ de Sistemas Computacionais \Wearables\ ANTIGASSSSÇÇÇÇÇÇOOOOOOOOOOOOO}
 \author{Rodolfo Labiapari Mansur Guimarães}%% Start the document
 
 %% Define the un-numbered front matter (cover pages, rubrik and table of contents)
@@ -176,9 +160,8 @@
 	\input{tex/chap-Introducao.tex}
 	\input{tex/chap-Revisao_Bibliografica.tex}
 	\input{tex/chap-Trabalhos_Relacionados.tex}
-	\input{tex/chap-Metodologia1.tex}
-    \input{tex/chap-Metodologia2.tex}
-	%%\input{tex/chap-Resultados.tex}
+	\input{tex/chap-Metodologia.tex}
+	%\input{tex/chap-Resultados.tex}
 	\input{tex/chap-Conclusao.tex}
 \end{mainmatter}
 
@@ -187,8 +170,8 @@
 \begin{flushleft}
 
 \end{flushleft}
-	\selectlanguage{brazilian}
-  	%\input{tex/extra-appendices}
+	  \selectlanguage{brazilian}
+  	\input{tex/extra-appendices}
 \end{appendices}
 \let\cleardoublepage\clearpage
 %% Produce the un-numbered back matter (e.g. colophon,
