@@ -1,0 +1,166 @@
+% !TeX encoding = UTF-8
+% !TEX root = ../presentation.tex
+\section{Apresentação}
+
+      \begin{frame}{Introdução}
+         \begin{itemize}
+            \setlength{\itemsep}{1.3em}
+            \item Progresso na obtenção e manipulação de informações + ascensão da tecnologia da microeletrônica, comunicação e sensores \cite{Jozwiak2017}
+            \begin{itemize}
+               \item Estimulou no desenvolvimento de sistemas computacionais inteligentes de comunicação e \wearables.
+            \end{itemize}
+            
+            \item Projeto de sistemas computacionais está mais complexo que nunca.
+            \begin{itemize}
+               \item Demanda por curto tempo para disponibilidade ao mercado + propriedades de corretude, rapidez, confiabilidade e preço acessível, representam um desafio para projetistas de sistemas embarcados em geral.
+            \end{itemize}                        
+            
+            \item Sistemas computacionais embarcados (SE) possuem componentes implementados tanto em \hs
+            \begin{itemize}
+               \item Esta decisão de escolha de implementação será o tema abordado.
+            \end{itemize}
+            
+         \end{itemize}
+         \pdfnote{SE}
+      \end{frame}
+      
+      \begin{frame}{\Wearables} \vspace{-1em}
+         \begin{itemize} \setlength{\itemsep}{0.9em}
+            \item Subconjunto na qual possui o propósito de integrar-se ao sistema corporal expandindo suas capacidades.
+            
+            \item Grande volume de dados de múltiplos sensores ou outros sistemas e são requeridos para prover serviço autônomo, contínuo, em um longo período de tempo.
+            
+            \item Diferentemente de \textit{smartphones} e \textit{tablets}, eles são incorporados ao vestuário.
+            
+            \item Tendência: Superar dispositivos manuais
+            \begin{itemize}
+               \item  São mais sofisticados pela existência de recursos sensoreais e escaneamento.
+            \end{itemize}
+      
+            \item Em 2015, foi previsto um total de 6,5 bi de dispositivos ativamente conectados \cite{RobvanderMeulen2015}.   
+            \begin{itemize}
+               \item Cerca de 20\% da população possui pelo menos um dispositivo sendo que 10\% utiliza-o todos os dias \cite{lee2016information}.
+            \end{itemize}
+      
+         \end{itemize}
+         \pdfnote{wearable}
+         \pdfnote{Criando uma integração cada vez mais intensa entre tecnologia e ser humano}
+      \end{frame}  
+      
+      
+      \begin{frame}{\Wearables}
+         \begin{itemize}
+            \item Permitem benefícios como um estilo de vida inspirado em dados \textit{fitness} até realidade aumentada preenchida por objetos virtuais.
+            
+            \item Demandam de uma alta performance e/ou baixo consumo de energia, sem apresentar \textit{trade-off} de confiabilidade e segurança entre outros \cite{Jozwiak2017}.
+	
+         \end{itemize}
+         
+            \bigskip         
+         
+         \begin{block}{Definição}
+            Embutidos que foram inseridos em ambiente \mobile\ de seus usuários, não exercendo a mesma atividade. 
+         \end{block}
+         
+         \begin{block}{Propósito}
+            Dispositivos com acesso constante, conveniente, portátil e principalmente \textit{hands-free}, aplicando não só na área de saúde e esportiva, mas também em entretenimento e assim por diante.
+         \end{block}
+      \end{frame}
+      
+
+   \subsection{Introdução ao Problema}
+      \begin{frame}{Apresentação do Problema}
+         \begin{itemize} \setlength{\itemsep}{1.8em}
+            \item A redução do ciclo de comercialização de um produto vs. aumento de sua eficiência de desenvolvimento de projeto tem se tornado uma preocupação
+            
+            \begin{itemize} \setlength{\itemsep}{0.8em}
+               \item Particionamento \hs\ é uma das principais tecnologias para o desenvolvimento de sistemas embarcados em geral;
+               
+               \item \cite{Hassine2017} ``soluções mais elegantes na computação que provê otimizações sistêmicas sobre essas circunstâncias''.
+            \end{itemize}
+            
+            \item \cite{Wolf1994}, SE gerais são considerados únicos pela necessidade de um \codesign.
+            \pdfnote{As pesquisas em \codesign\ têm como objetivo o \design\ de sistemas heterogêneos, visando performance, custo e metas de confiabilidade \cite{Edwards1994}}
+
+         \end{itemize}
+      \end{frame}
+      
+      \begin{frame}{Apresentação do Problema}
+      
+         \begin{block}{Definição de \cite{Hidalgo1997}}
+            Objetivo principal é o balanceamento de todas as tarefas de forma a otimizar alguns objetivos de sistema sobre determinadas restrições.
+	         Agrupar específicos conjuntos de instruções de uma aplicação e então mapear esses grupos tanto em \hs.
+         \end{block}
+         
+            \bigskip
+
+         \begin{block}{Definição Geral}
+            Um desafio de \design\ é combinar a flexibilidade de demanda pelos vários ambientes e aplicações, e a alta performance exigida em tarefas com o baixo consumo de energia requerido para maximizar o tempo de uso da bateria.
+         \end{block}
+
+      \end{frame}
+      
+      
+   \subsection{Motivação}
+      \begin{frame}{Motivação} \vspace{-1em}
+         \begin{itemize}
+            \item Problema que envolve \codesign\ é um passo-chave no \design\ de produtos modernos \cite{Trappey2016}. 
+            
+            \item Implementações que baseiam-se somente em módulos de \software\ possuem mais flexibilidade e menos custosos, entretanto, seu custo eleva-se em termos de tempo de execução;
+            \begin{itemize}
+               \item \textbf{\textit{Hardware}:} proverá eficiência energética e \speedup\ maior à implementações em \software\ \cite{Zhang2008, Hassine2017, Wolf1994, Canis2011, Stone2010}.
+            \end{itemize}
+            
+                  \todo[inline]{REFERENCAIAS}
+                  
+   % combinação de fpga com cpu
+            \item Combinação entre processador com os recursos dos arranjo de portas programáveis em campo\footnote{FPGAs, do inglês \textit{Field-Programmable Gates Array}.} forma um sistema computacional híbrido
+            
+            \begin{itemize}
+               \item \textbf{Resultado:} Pode-se acelerar uma aplicação melhorando no desempenho e eficiência energética em comparação com \software\ \cite{Cong2009, Lo2009, Zhang2008a}. 
+            \end{itemize}
+            
+         \end{itemize}
+         
+      \end{frame}
+   
+   
+   \subsection{Objetivos}
+      \begin{frame}{Objetivos Gerais}
+      
+         \begin{itemize}
+            \item Abordagem do particionamento \hs\ bem como sua importância no mundo de sistemas computacionais embutidos
+            \begin{itemize}
+               \item Foco em sistemas \wearables\ apresentando algumas soluções utilizadas atualmente.
+            \end{itemize}
+         \end{itemize}
+         
+      \end{frame}
+   
+   
+      \begin{frame}{Objetivos Específicos}
+          \begin{itemize} \setlength{\itemsep}{1.8em}
+            \item Apresentação do problema de particionamento \hs\ com foco em sistemas \wearables;
+         
+            \item Principais soluções apresentadas ao logo dos anos e as utilizadas atualmente;
+         
+            \item  Ferramentas \textit{high-level syntesis} (HLS) como LegUp e OpenCL para a geração de sistemas computacionais que usufruem de aceleradores em \hardware.
+         
+            \item Abordagem metodológica para a procura da solução do problema de particionamento \hs\ apresentado.
+         \end{itemize}
+      \end{frame}
+
+
+   \subsection{Justificativa}
+      
+      \begin{frame}{Justificativa}
+         \begin{itemize} \setlength{\itemsep}{1.8em}
+            \item \Designs\ mais complexos.
+            
+            \item Requisito para eficiência necessariamente segue junto com a alta velocidade de processamento \cite{Trindade2016, Arato2005, Yan2017}.
+	
+	         \item Defasagem para \wearables.
+	         
+         \end{itemize}
+
+      \end{frame}
